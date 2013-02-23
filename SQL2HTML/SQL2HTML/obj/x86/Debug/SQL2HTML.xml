@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SQL2HTML
+</name>
+</assembly>
+<members>
+<member name="M:SQL2HTML.moduleSQL2HTML.ObjectToString(System.Object)">
+	<summary>
+ Transforms a database value to a String
+ </summary>
+	<param name="obj">Object</param>
+	<returns>String represantation of the object</returns>
+	<remarks>Returns "" if the object is Nothing or DBNULL</remarks>
+</member><member name="M:SQL2HTML.moduleSQL2HTML.BooleanToEnglish(System.Boolean)">
+	<summary>
+ Transforms True | False to Yes | No
+ </summary>
+	<param name="bool">Boolean value</param>
+	<returns>More readable for non-users</returns>
+	<remarks></remarks>
+</member><member name="M:SQL2HTML.Field.ToHTML(System.String,System.Boolean)">
+	<summary>
+ Transforms an SQL field to HTML
+ </summary>
+	<param name="tableName">Parent table of the field</param>
+	<param name="altColor">Default color or alternative color</param>
+	<returns>HTML representation of the field</returns>
+	<remarks>
+ "alternativeColor" is a .css setting. When it isn't set in styles.css, it won't be applied.
+ The Primary Key fields will receive a "a name" property used for inpage linking
+ The Foreign Key fields will receive a link to said inpage link
+ </remarks>
+</member><member name="M:SQL2HTML.TableContainer.ToHTML">
+	<summary>
+ Transforms multiple tables to HTML in valid XHTML 1.0
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:SQL2HTML.Table.ToHTML">
+	<summary>
+ Transforms one table to HTML
+ </summary>
+	<remarks>
+ The "class" attribute is used in the .css styling. See styles.css
+ </remarks>
+</member><member name="P:SQL2HTML.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SQL2HTML.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SQL2HTML.My.Resources.Resources.logo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SQL2HTML.My.Resources.Resources.styles">
+	<summary>
+  Looks up a localized string similar to /*
+* Note: image "logo.gif" has to be in same directory
+*/
+	
+/* Document title */
+h1
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-top:solid #626658;
+	border-bottom:solid  #626658;
+	color: #9AA676;
+}
+.table
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	width:100%;
+	border-collapse:collapse;
+	border:1px solid #98bf21;
+}
+.table td
+{
+	font-size:1em;
+	border:1px solid #98bf21;
+	padding:3px 7px 2px 7px;
+	width: 10%; /* Attempt to make width of each c [rest of string was truncated]";.
+</summary>
+</member><member name="T:SQL2HTML.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:SQL2HTML.Main.Main_Load(System.Object,System.EventArgs)">
+	<summary>
+ You can put the name of the server you use the most here
+ IgnorePrefix is used to excluse certain prefixes from the convertion
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks>
+ TODO: extract it to a config file.
+ </remarks>
+</member>
+</members>
+</doc>
